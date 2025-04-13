@@ -1,0 +1,169 @@
+body{
+  font-family: Arial, sans-serif;
+  background-color: #0d1b2a; 
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  
+}
+nav{
+  top: 0;
+ position: fixed;
+  display: flex;
+  justify-content: end;
+  background-color: #0D1B2A;
+ width: 100%;
+ z-index: 4;
+ }
+ nav a{
+   padding: 20px;
+   font-size: x-large;
+   text-decoration: none;
+   color: rgb(204, 137, 137);
+ }
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  /* margin-top: 200px;
+  margin-bottom: 200px; */
+ margin-top: 100px;
+} 
+.banner .slider{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: calc(50% - 100px);
+  transform-style:preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+@keyframes autoRun{
+  from{
+    transform: perspective(1000px)  rotateX(-15deg) rotateY(0deg) ;
+  }
+  to{
+    transform: perspective(1000px) rotateX(-15deg) rotateY(360deg) ;
+  }
+}
+.banner .slider .item{
+  position: absolute;
+  inset: 0 0 0 0; 
+  transform: rotateY(calc((var(--position) - 1 ) * (360 / var(--quantity))*1deg))
+  translateZ(350px);
+  
+}
+.banner .slider .item img{
+  width: 100%;
+  height:100% ;
+  object-fit: cover;
+ 
+}
+
+.skills-section{
+  margin-bottom: 40px;
+}
+/* Skills Section */
+.skills-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skills-section h2 span {
+  color: #00aaff; /* Highlighted color */
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Individual Skill Box */
+.skills-box {
+  background-color: #112240;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+.skills-box h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Skill Item */
+.skill {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.skill p {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #223343;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #00aaff;
+  border-radius: 5px;
+}
+
+@media(max-width:600px){
+  .skills-container{
+    flex-wrap: wrap;
+  }
+  .skills-box{
+    width: 80%;
+  }
+}
+@media(max-width:900px){
+ 
+  .banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0; 
+    transform: rotateY(calc((var(--position) - 1 ) * (360 / var(--quantity))*1deg))
+    translateZ(250px);
+    
+  }
+}
+@media(max-width:600px){
+ 
+  .banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0; 
+    transform: rotateY(calc((var(--position) - 1 ) * (360 / var(--quantity))*1deg))
+    translateZ(170px);
+    
+  }
+  .banner .slider{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 30px);
+  }
+ 
+}
