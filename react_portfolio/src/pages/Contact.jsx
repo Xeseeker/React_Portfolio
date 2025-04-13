@@ -53,7 +53,11 @@ function Contact() {
         alert('Something went wrong!');
       }
 
-
+      setEmail('');
+      setMessage('');
+      setMobile('');
+      setName('');
+      setSubject('');
     }
 
   return (
