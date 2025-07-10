@@ -5,7 +5,7 @@ import Node from "./NODEjs.png";
 import postG from "./postG.png";
 import html from "./html.jpg";
 import react from "./images.png";
-import python  from "./py.jpg";
+import python from "./py.jpg";
 import js from "./JS.png";
 import meImage from "./me.png";
 import e_commerce from "./e_commerce.jpg";
@@ -15,8 +15,8 @@ import wheather from "./wheather.jpg";
 import clinic from "./clinic.png";
 import travel from "./travel.jpg";
 import md from "./md.png";
-
-const assets={
+import my from "./my_up.jpg";
+const assets = {
   C_Plus,
   css,
   java,
@@ -33,8 +33,8 @@ const assets={
   Rock,
   Music,
   e_commerce,
-  md
+  md,
+  my,
+};
 
-}
-
-export default assets
+export default assets;

@@ -15,7 +15,7 @@ nav{
   justify-content: space-between;
   background-color: #0D1B2A;
   align-items: center;
- 
+
  }
  nav .mm{
   font-size: xx-large;
@@ -111,12 +111,15 @@ button{
  h1{
   font-size: xx-large;
   margin-bottom: 10px;
+  color:rgb(204, 137, 137) ;
 }
 
  h3{
-  color: goldenrod;
+  /* color: goldenrod; */
+  color:rgb(204, 137, 137) ;
   font-size: x-large;
   margin-bottom: 10px;
+  /* animation: slide 1s ; */
 }
 .outer{
   margin-top: 150px;
@@ -124,9 +127,25 @@ button{
   width: 50%;
  
 }
+
+
+.outer span{
+  /* color: goldenrod; */
+  color: #00aaff;
+}
+/* @keyframes slide {
+  0%{
+     transform: translateX(-600px);
+  }
+  100%{
+    transform: translateX(100px);
+  }
+} */
+
 .outer p {
   font-size: 1em;
-  color: goldenrod;
+  /* color: goldenrod; */
+  color:rgb(204, 137, 137) ;
   line-height: 1.8;  /* Adjusts line spacing for better readability */
   margin-top: 20px;  /* Adds space above the paragraph */
   margin-bottom: 20px;  /* Adds space below the paragraph */
