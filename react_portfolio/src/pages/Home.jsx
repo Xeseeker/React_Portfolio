@@ -1,43 +1,9 @@
 import React from "react";
-import { useEffect, useRef, useState } from "react";
+
 import { Element } from "react-scroll";
 import assets from "../assets/assets.js";
 
 function Home() {
-  const [isClicked, setIsClicked] = useState(true);
-  const iconRef = useRef(null);
-  const buttonRef = useRef(null);
-
-  const changeBackGround = () => {
-    const icon = iconRef.current;
-    const btn = buttonRef.current;
-
-    if (isClicked) {
-      icon.classList.remove("fa-sun");
-      icon.classList.add("fa-moon");
-      document.body.classList.remove("dark-mode");
-      document.body.classList.add("light-mode");
-      document.getElementById("pp").classList.add("changing");
-      btn.classList.remove("change2");
-      btn.classList.add("change");
-    } else {
-      icon.classList.remove("fa-moon");
-      icon.classList.add("fa-sun");
-      document.body.classList.remove("light-mode");
-      document.body.classList.add("dark-mode");
-      btn.classList.remove("change");
-      btn.classList.add("change2");
-    }
-  };
-
-  const handleToggle = () => {
-    setIsClicked((prev) => {
-      const newState = !prev;
-      changeBackGround();
-      return newState;
-    });
-  };
-
   return (
     <Element name="home" className="section test">
       <div className="mode"></div>

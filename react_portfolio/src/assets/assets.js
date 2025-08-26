@@ -16,6 +16,9 @@ import clinic from "./clinic.png";
 import travel from "./travel.jpg";
 import md from "./md.png";
 import my from "./my_up.jpg";
+import social from "./socialMedia.png";
+import chat from "./chat.png";
+import camera from "./camera.png";
 const assets = {
   C_Plus,
   css,
@@ -35,6 +38,9 @@ const assets = {
   e_commerce,
   md,
   my,
+  social,
+  chat,
+  camera,
 };
 
 export default assets;
